@@ -1,0 +1,35 @@
+//git的token
+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
+
+账号：zhangxuanying37
+密码：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
+
+git Repositories 项目->team->show in repositories view  查看仓库分支，修改提交地址信息、密码。
+team synchronizing 项目->team->synchronize workspace 修改本地、远程仓库中不同的地方，并合并。
+config git Repositories->项目->working directory->.git->config
+config信息：
+[core]
+	symlinks = false
+	repositoryformatversion = 0
+	filemode = false
+	logallrefupdates = true
+	excludesfile = D:/Documents/java.gitignore
+[branch "master"]
+	remote = token
+	merge = refs/heads/master
+[remote "token"]
+	url = https://github.com/zhangxuanying37/jsp_72.git
+	fetch = +refs/heads/*:refs/remotes/token/*
+window->preferences->team->git->configuration 修改http、user等信息
+window->preferences-gerneral->network connections 修改连接地址、协议及端口
+
+problems:
+not authorized 没有权限，密码未输入或者不正确
+nothing to fetch 没有配置好config信息
+cannot open git-upload-pack 将http.sslverify的值改为false
+用这个命令 git config --system --unset credential.helper 可重新输入账号密码
+git config --global user.name "username" --设置用户名
+git config --global user.email "useremail" --设置用户邮箱
+git config -l --查看配置信息
+git remote remove 分支名 --删除分支
+git remote rename oldname newname --修改分支名
